@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(45deg, #3e9f82 0%, #3F97A2 100%);
+    background-repeat: no-repeat;
+    font-family: 'Caveat', cursive;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app nav svg {
+    margin: 0.8%;
 }
 
-.App-link {
-  color: #61dafb;
+.app nav h1 {
+    margin: 0% 1%;
+    font-size: 4rem;
+    justify-content: flex-start;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+}
+
+.search p,
+.robot p {
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+.search input {
+    /* width: 100%; */
+    padding: 2%;
+    background-image: linear-gradient(45deg, #fab005 5%, #ff8787 95%);
+    color: black;
+    font-size: larger;
+    font-weight: bolder;
+    border: 0;
+    border-radius: 10px;
+    outline: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.search input::placeholder {
+    font-weight: normal;
+    color: black;
+    text-transform: capitalize;
+}
+
+.robot {
+    text-transform: uppercase;
+    width: 100%;
+    flex-direction: column;
+}
+
+.robot p {
+    margin-top: 2%;
+}
+
+@media only screen and (max-width:768px) {
+    .app nav h1 {
+        justify-content: center;
+    }
+    .container {
+        padding-top: 30%;
+        grid-template-columns: 1fr;
+    }
+    .search {
+        height: 100%;
+    }
+    .search input {
+        padding: 3%;
+    }
+    .search p {
+        font-size: larger;
+    }
+    .robot p {
+        margin-top: 5%;
+    }
 }
