@@ -46,6 +46,7 @@ body {
 
 .search p,
 .robot p {
+    margin-top: 2%;
     font-weight: bolder;
     font-size: x-large;
 }
@@ -97,6 +98,7 @@ body {
     .search p {
         font-size: larger;
     }
+    .search,
     .robot p {
         margin-top: 5%;
     }

@@ -28,7 +28,7 @@ function App() {
                 placeholder="Enter Something....."
                 onChange={handleChange}
               />
-              <p>Write something and hit ENTER !!</p>
+              <p>Just TYPE and see the MAGIC !!</p>
             </div>
           </form>
           <div className="robot center">
